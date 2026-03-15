@@ -11,7 +11,7 @@ class ConfigWindow(tk.Toplevel):
         self.transient(parent)
         self.parent = parent
         self.title("Configuration")
-        self.geometry("500x200")
+        self.geometry("500x140")
 
         self.download_path = tk.StringVar(value=str(parent.download_path))
         self.playlist_var = tk.BooleanVar(value=parent.playlist)
@@ -54,7 +54,7 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("YouTube Downloader")
-        self.geometry("500x350")
+        self.geometry("500x250")
 
         self.config_file = Path("config.json")
         self.download_path, self.playlist = self.load_config()
